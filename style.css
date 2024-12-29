@@ -1,0 +1,176 @@
+:root {
+--main-clr: hsl(234, 12%, 34%);
+--light-grey: hsl(229, 6%, 66%);
+--very-light-grey: hsl(0, 0%, 98%);
+
+--red-border: hsl(0, 78%, 62%);
+--cyan-border: hsl(180, 62%, 55%);
+--orange-border: hsl(34, 97%, 64%);
+--blue-border: hsl(212, 86%, 64%);
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+}
+
+body {
+    margin-bottom: 6em;
+    background-color: var(--very-light-grey);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2rem;
+}
+
+main {
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.narrow-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 31.25em;
+    text-align: center;
+    line-height: 1.4;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.2rem;
+    color: var(--main-clr);
+    margin-top: 2.5em;
+    margin-bottom: .6em;
+    text-align:initial
+}
+
+h1 span {
+    font-weight: 600;
+}
+
+header p {
+    color: var(--light-grey);
+    font-size: 0.9375rem;
+    font-weight: 400;
+}
+
+header {
+    margin-bottom: 4em;
+}
+
+@media(max-width: 476px) {
+    
+    h1 {
+        font-size: 1.5rem;
+     }
+
+    }
+
+@media(max-width: 375px) {
+    
+        h1 {
+            font-size: 1.2rem;
+         }
+    
+        }
+
+
+.grid-layout {
+    --gap: 2rem;
+    display: grid;
+    gap: var(--gap);
+    align-items: center;
+}
+
+@media(min-width: 800px) {
+    .grid-layout {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.grid-layout > * {
+    flex: 1;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Middle column */
+.two {
+    gap:var(--gap)
+}
+
+.card {
+    background-color: #ffff;
+    box-shadow: 0px 15px 20px 0px rgba(139, 174, 208, 0.315);
+    padding: 2em;
+    border-radius: .3rem;
+    border-top: .3rem solid;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 60px;
+    align-self: flex-end;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-clr);
+    margin-bottom: 0.875rem
+}
+
+.card p {
+
+    font-weight: 400;
+    font-size: .8rem;
+    color: var(--light-grey);
+    margin-bottom: 2.5em;
+}
+
+.card.cyan {
+    border-color: var(--cyan-border);
+}
+
+.card.red {
+    border-color: var(--red-border)
+}
+
+.card.yellow {
+    border-color: var(--orange-border);
+}
+
+.card.blue {
+    border-color: var(--blue-border);
+    
+}
