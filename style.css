@@ -156,6 +156,7 @@ h2 {
     font-size: .8rem;
     color: var(--light-grey);
     margin-bottom: 2.5em;
+    line-height: 1.8;
 }
 
 .card.cyan {
